@@ -1,7 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="de">
 <head>
 	<title>Karten</title>
+	<link rel="manifest" href="manifest.json">
+	<meta name="theme-color" content="#000000">
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="sw" href="./sw.js">
+
 	<style>
 		.card {
 			font-size: 80px;
@@ -76,6 +84,7 @@
 	</style>
 </head>
 <body>
+	<main>
 	<b id="timer" style="font-size: 20px;">Time: 00:00:00</b>
 	<h1>Dein Deck:</h1>
 
@@ -154,8 +163,8 @@
 	<p id="show_card"></p>
 	<p id="card-info"></p>
 
-
-
+</main>
+<script src="sw.js"></script>
 	<script>
 		//timer
 

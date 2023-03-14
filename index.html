@@ -2,13 +2,13 @@
 <html lang="de">
 <head>
 	<title>Karten</title>
-	<link rel="manifest" href="manifest.json">
-	<meta name="theme-color" content="#000000">
-	<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="Die Seite zeigt ein Workout mit Karten">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <link rel="apple-touch-icon" type="image/png" href="icons/icon_size1.png">
+    <link rel="manifest" href="./manifest.json">
     <link rel="sw" href="./sw.js">
+    <meta charset="utf-8">
 
 	<style>
 		.card {
@@ -164,8 +164,9 @@
 	<p id="card-info"></p>
 
 </main>
-<script src="sw.js"></script>
+
 	<script>
+
 		//timer
 
 		var seconds = 0;
@@ -404,6 +405,12 @@
 		}
 		// Call the shuffleDeck() function on page load
 		window.onload = shuffleDeck;
+
+		if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("./sw.js");
+      }
 	</script>
+
+
 </body>
 </html>       

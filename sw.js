@@ -8,16 +8,13 @@ const assets = [
  
 ].map(url => currentPath + url)
 
-self.addEventListener('install', function(event) {
-    event.waitUntil(
-      caches.open('my-pwa-cache').then(function(cache) {
-        return cache.addAll([
-          '/',
-          '/index.html',
-        ]);
+self.addEventListener("install", installEvent => {
+  installEvent.waitUntil(
+      caches.open(cacheName).then(cache => {
+          cache.addAll(assets)
       })
-    );
-  });
+  )
+});
   
   self.addEventListener('fetch', function(event) {
     event.respondWith(

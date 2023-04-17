@@ -4,7 +4,6 @@ const cacheName = "cards-workout-v1"
 const assets = [
   "/",
   "/index.html",
-  "/script.js"
  
 ].map(url => currentPath + url)
 
